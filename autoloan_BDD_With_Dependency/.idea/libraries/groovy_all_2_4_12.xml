@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="groovy-all-2.4.12">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/groovy-all-2.4.12.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/mockito-all-2.0.2-beta.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/spock-core-1.1-groovy-2.4.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cglib-nodep-3.2.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cucumber-core-1.2.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cucumber-java-1.2.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cucumber-junit-1.2.5.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/gherkin-2.12.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/cucumber-jvm-deps-1.0.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/mockito-all-2.0.2-beta.jar!/" />
+    </SOURCES>
+  </library>
+</component>
