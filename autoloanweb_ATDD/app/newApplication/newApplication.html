@@ -1,0 +1,2411 @@
+<!--Preloader-->
+<div id="layout" class="layout-boxed-margin"
+	ng-init="prePopulateUserInfo()">
+	<!-- fond-header-->
+	<div id="fond-header"
+		class="fond-header color-header-8 pattern-header-01"></div>
+	<!-- End fond-header-->
+	<!-- Header Area -->
+	<header id="header">
+		<div class="row">
+			<!-- Logo Area -->
+			<div class="col-md-4 col-lg-5">
+				<div class="logo">
+					<div class="icon-logo">
+						<i class="fa fa-university"></i>
+					</div>
+					<a href="index.html"> EZ Bank <span>Your money is safe.</span>
+					</a>
+				</div>
+			</div>
+			<!-- End Logo Area -->
+
+			<!-- Login Area -->
+
+			<!-- End Login Area -->
+		</div>
+	</header>
+	<!-- End Header Area -->
+	<!-- content-central-->
+	<div class="content-central">
+		<!-- Nav-->
+		<!-- End Nav-->
+		<!-- Container Area  -  Slide and tabs -->
+		<div class="content_info">
+			<div class="container">
+				<div class="row">
+					<!-- Content Breadcumbs And Slide-->
+					<div class="col-md-12">
+						<!-- breadcrumbs-->
+						<div class="breadcrumbs">
+							<ul>
+								<li class="breadcrumbs-home"><a href="#"
+									title="Back To Home"> <i class="fa fa-home"></i></a></li>
+								<li>Get Started /</li>
+								<li>New Auto Loan Application</li>
+							</ul>
+						</div>
+					</div>
+					<!-- End breadcrumbs-->
+					<!-- Info Content  - Principal Info-->
+					<!--                 <div class="content_info"> -->
+					<!--                     <div class="paddings"> -->
+					<!-- Container Area - Boxes Services -->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-9 credit-area">
+								<!-- Nav tabs -->
+								<ul class="nav nav-tabs" role="tablist" id="tabs">
+									<li role="presentation" id="t1" class="active"><a
+										href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"
+										aria-expanded="false" target="_blank"
+										ng-click="showPersonalTab()">About You</a></li>
+									<li role="presentation" id="t2" class=""><a href="#tab2"
+										aria-controls="tab2" role="tab" data-toggle="tab"
+										aria-expanded="false" target="_blank"
+										ng-click="showVehicleTab()">About Account</a></li>
+									<li role="presentation" id="t3" class=""><a href="#tab3"
+										aria-controls="tab3" role="tab" data-toggle="tab"
+										aria-expanded="false" target="_blank" ng-click="showSummary()">Review
+											&amp; Submit</a></li>
+									<li role="presentation" id="t4" class=""><a href="#tab4"
+										aria-controls="tab4" role="tab" data-toggle="tab"
+										aria-expanded="false" target="_blank" ng-click="showReview()">Results</a>
+									</li>
+								</ul>
+								<!-- End Nav tabs -->
+								<!-- tab-content-->
+								<div class="tab-content form-theme">
+									<!-- tab-Item-1-->
+									<div role="tabpanel" class="tab-pane fade in active" id="tab1"
+										style="background-color: #f4f6f3;">
+
+										<div class="panel-body" style="background-color: #f2f2f2;">
+											<div class="panel" id="AutoInfo">
+												<form name="personalForm">
+
+													<div class="panel panel-primary" id="personalInfo"
+														ng-form="perInfoForm">
+														<div class="panel-heading">
+															<label class="panel-title text-info">Personal
+																Information</label>
+														</div>
+														<div class="panel-body">
+															<div class="row">
+																<div class="col-sm-5"
+																	ng-class="{'has-error':perInfoForm.fName.$error.required && perInfoForm.fName.$pristine}"
+																	data-effect="slide-right">
+																	<input type="text" class="form-control" id="fn"
+																		required ng-model="firstName" name="fName"
+																		placeholder="Full First Name*">
+																	<p
+																		ng-show="perInfoForm.fName.$error.required && perInfoForm.fName.$pristine"
+																		class="help-block">Please Enter a valid First Name</p>
+
+																</div>
+																<div class="col-sm-5" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.lName.$error.required && perInfoForm.lName.$pristine}"
+																	data-effect="slide-right">
+																	<input type="text" class="form-control" name="lName"
+																		required ng-model="lastName" placeholder="Last Name*"
+																		id="ln">
+																	<p
+																		ng-show="perInfoForm.lName.$error.required && perInfoForm.lName.$pristine"
+																		class="help-block">Please Enter a valid Last Name</p>
+																</div>
+																<div class="col-sm-2 col-lg-2"
+																	ng-class="{'has-error':perInfoForm.cpt.$error.required && perInfoForm.cpt.$pristine}"
+																	data-effect="slide-right">
+
+																	<select class="form-control" id="titleTxt" name="cpt"
+																		required ng-model="caption">
+																		<option value="">Select</option>
+																		<option value="M/S.">M/S.</option>
+																		<option value="Mr.">Mr.</option>
+																		<option value="Mrs.">Mrs.</option>
+																		<option value="Jr.">Jr.</option>
+																		<option value="Other.">Other.</option>
+																	</select>
+																	<p
+																		ng-show="perInfoForm.cpt.$error.required && perInfoForm.cpt.$pristine"
+																		class="help-block">Select a Caption</p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-5" data-effect="slide-right">
+																	<h5 for="FirstNmae" classcontrol-label"="">Primary
+																		Residential Address</h5>
+																</div>
+																<div class="col-sm-7" data-effect="slide-right"></div>
+															</div>
+															<div class="row">
+																<div class="col-sm-7" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.pobox.$error.required && perInfoForm.pobox.$pristine}"
+																	data-effect="slide-right">
+																	<input type="text" class="form-control"
+																		placeholder="Current Residential Address Street Address (No P.O Box)*"
+																		name="pobox" required ng-model="address1">
+																	<p
+																		ng-show="perInfoForm.pobox.$error.required && perInfoForm.pobox.$pristine"
+																		class="help-block">Please Enter a valid Address</p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-7" data-effect="slide-right">
+																	<input type="text" class="form-control"
+																		placeholder="Street Address 2" id="street" required
+																		ng-model="address2">
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-5" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.city.$error.required && perInfoForm.city.$pristine}">
+																	<input type="text" class="form-control"
+																		placeholder="City" name="city" required
+																		ng-model="city">
+																	<p
+																		ng-show="perInfoForm.city.$error.required && perInfoForm.city.$pristine"
+																		class="help-block">Please Enter a valid City</p>
+
+																</div>
+																<div class="col-sm-5" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.city.$error.required && perInfoForm.city.$pristine}"
+																	data-effect="slide-right">
+
+																	<select class="form-control" required id="perState"
+																		name="perState" ng-model="state">
+																		<p
+																			ng-show="perInfoForm.perState.$error.required && perInfoForm.perState.$pristine"
+																			class="help-block">Please Enter a valid City name</p>
+
+																		<option value="">State</option>
+																		<option value="AL">Alabama</option>
+																		<option value="AK">Alaska</option>
+																		<option value="AZ">Arizona</option>
+																		<option value="AR">Arkansas</option>
+																		<option value="CA">California</option>
+																		<option value="CO">Colorado</option>
+																		<option value="CT">Connecticut</option>
+																		<option value="DE">Delaware</option>
+																		<option value="DC">District Of Columbia</option>
+																		<option value="FL">Florida</option>
+																		<option value="GA">Georgia</option>
+																		<option value="HI">Hawaii</option>
+																		<option value="ID">Idaho</option>
+																		<option value="IL">Illinois</option>
+																		<option value="IN">Indiana</option>
+																		<option value="IA">Iowa</option>
+																		<option value="KS">Kansas</option>
+																		<option value="KY">Kentucky</option>
+																		<option value="LA">Louisiana</option>
+																		<option value="ME">Maine</option>
+																		<option value="MD">Maryland</option>
+																		<option value="MA">Massachusetts</option>
+																		<option value="MI">Michigan</option>
+																		<option value="MN">Minnesota</option>
+																		<option value="MS">Mississippi</option>
+																		<option value="MO">Missouri</option>
+																		<option value="MT">Montana</option>
+																		<option value="NE">Nebraska</option>
+																		<option value="NV">Nevada</option>
+																		<option value="NH">New Hampshire</option>
+																		<option value="NJ">New Jersey</option>
+																		<option value="NM">New Mexico</option>
+																		<option value="NY">New York</option>
+																		<option value="NC">North Carolina</option>
+																		<option value="ND">North Dakota</option>
+																		<option value="OH">Ohio</option>
+																		<option value="OK">Oklahoma</option>
+																		<option value="OR">Oregon</option>
+																		<option value="PA">Pennsylvania</option>
+																		<option value="RI">Rhode Island</option>
+																		<option value="SC">South Carolina</option>
+																		<option value="SD">South Dakota</option>
+																		<option value="TN">Tennessee</option>
+																		<option value="TX">Texas</option>
+																		<option value="UT">Utah</option>
+																		<option value="VT">Vermont</option>
+																		<option value="VA">Virginia</option>
+																		<option value="WA">Washington</option>
+																		<option value="WV">West Virginia</option>
+																		<option value="WI">Wisconsin</option>
+																		<option value="WY">Wyoming</option>
+																	</select> <span class="custom-select">Select</span>
+																	<p
+																		ng-show="perInfoForm.perState.$error.required && perInfoForm.perState.$pristine"
+																		class="help-block">Please select a State</p>
+																</div>
+																<div class="col-sm-2" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.perZip.$error.required && perInfoForm.perZip.$pristine}">
+																	<input type="text" class="form-control" numbers-only
+																		placeholder="Zip Code*" id="zipcode" name="perZip"
+																		required ng-model="zipcode">
+																	<p
+																		ng-show="perInfoForm.perZip.$error.required && perInfoForm.perZip.$pristine"
+																		class="help-block">Please Enter a valid Zip code</p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-8" data-effect="slide-right">
+																	<h5 for="FirstNmae" classcontrol-label"="">Is the
+																		United States your country of permanent residence?*</h5>
+																</div>
+																<div class="col-sm-4" data-effect="slide-right"></div>
+															</div>
+															<div class="row">
+																<div class="radiobtn">
+																	<div class="col-sm-8">
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="optionsRadios" value="option2"
+																				ng-click="checkCitizen('pr','true')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Yes</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				checked="checked" name="optionsRadios"
+																				value="option2"
+																				ng-click="checkCitizen('pr','false')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>No</h5>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-8" data-effect="slide-right">
+																	<h5 for="FirstNmae" classcontrol-label"="">Do you
+																		have additional residences in other countries?*</h5>
+																</div>
+																<div class="col-sm-4" data-effect="slide-right"></div>
+															</div>
+															<div class="row">
+																<div class="radiobtn">
+																	<div class="col-sm-8">
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="otherRadios12" value="option2"
+																				ng-click="checkCitizen('other','true')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Yes</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="otherRadios12" checked="checked"
+																				value="option2"
+																				ng-click="checkCitizen('other','false')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>No</h5>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-8" data-effect="slide-right">
+																	<h5 for="FirstNmae" classcontrol-label"="">How
+																		long have you lived at your current address?*</h5>
+																</div>
+																<div class="col-sm-4" data-effect="slide-right"></div>
+															</div>
+															<div class="row">
+																<div class="col-sm-2" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.yrOfRes.$error.required && perInfoForm.yrOfRes.$pristine}">
+																	<input type="number" id="YearofResidence"
+																		name="yrOfRes" class="form-control" required
+																		ng-model="yearLived" min="0" max="99">
+																	<p
+																		ng-show="perInfoForm.yrOfRes.$error.required && perInfoForm.yrOfRes.$pristine"
+																		class="help-block">Please Enter a valid Year of
+																		Residence</p>
+																</div>
+																<div class="col-sm-1" data-effect="slide-right">
+																	<label for="FirstNmae" classcontrol-label"="">Years</label>
+																</div>
+
+																<div class="col-sm-2" data-effect="slide-right"
+																	ng-class="{'has-error':perInfoForm.mntLived.$error.required && perInfoForm.mntLived.$pristine}">
+																	<input type="number" id="MonthsofResidence"
+																		name="mntLived" class="form-control" "="" required
+																		ng-model="monthLived" min="0" max="11">
+																	<p
+																		ng-show="perInfoForm.mntLived.$error.required && perInfoForm.mntLived.$pristine"
+																		class="help-block">Please Enter a valid Months of
+																		Residence</p>
+																</div>
+																<div class="col-sm-1" data-effect="slide-right">
+																	<p class="lead text-muted">Months</p>
+																</div>
+															</div>
+															<div class="row">
+																<div class="checkbox"></div>
+															</div>
+															<div class="row">
+																<div class="col-sm-6 ">
+																	<h5 for="PrimaryPhoneNo" classcontrol-label"="">Primary
+																		Phone Number</h5>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-4 "
+																	ng-class="{'has-error':perInfoForm.prPhn.$error.required && perInfoForm.prPhn.$pristine}">
+																	<input type="text" class="form-control" placeholder=""
+																		id="pyPhoneTxt" required phone-input name="prPhn"
+																		ng-model="primaryPhone">
+																	<p
+																		ng-show="perInfoForm.prPhn.$error.required && perInfoForm.prPhn.$pristine"
+																		class="help-block">Please Enter a valid Phone
+																		Number</p>
+																</div>
+																<div class="radiobtn">
+																	<div class="col-sm-8">
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="prRadios" id="phRadios" value="option2"
+																				ng-click="checkPhoneType('pr','home')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Home</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="prRadios" id="phRadios1" value="option2"
+																				ng-click="checkPhoneType('pr','work')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Work</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				checked="checked" name="prRadios" id="phRadios2"
+																				value="option2"
+																				ng-click="checkPhoneType('pr','mobile')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Mobile</h5>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-6 ">
+																	<h5 for="PrimaryPhoneNo" classcontrol-label"="">Secondary
+																		Phone Number</h5>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-sm-4 "
+																	ng-class="{'has-error':perInfoForm.secPhone.$error.required && perInfoForm.secPhone.$pristine}">
+																	<input type="text" class="form-control" placeholder=""
+																		id="pyPhoneTxt" required phone-input name="secPhone"
+																		ng-model="secondaryPhone">
+																	<p
+																		ng-show="perInfoForm.secPhone.$error.required && perInfoForm.secPhone.$pristine"
+																		class="help-block">Please Enter a valid secondary
+																		Phone Number</p>
+																</div>
+																<div class="radiobtn">
+																	<div class="col-sm-8">
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="secRadios" id="scRadios1" value="option3"
+																				ng-click="checkPhoneType('sc','home')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Home</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				name="secRadios" id="scRadios2" value="option3"
+																				ng-click="checkPhoneType('sc','work')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Work</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" class="form-control"
+																				checked="checked" name="secRadios" id="scRadios3"
+																				value="option3"
+																				ng-click="checkPhoneType('sc','mobile')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Mobile</h5>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-8">
+																	<h5>We'll only use your email address to contact
+																		you about this application.</h5>
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-8"
+																	ng-class="{'has-error': perInfoForm.emailTx.$error.required && perInfoForm.emailTx.$pristine}">
+																	<input type="email" class="form-control"
+																		placeholder="Email Address*" id="emailTxt"
+																		name="emailTx" required ng-model="email ">
+																	<p
+																		ng-show="perInfoForm.emailTx.$error.email 
+                                                          && perInfoForm.emailTx.$pristine"
+																		class="help-block">Please Enter a valid e-Mail</p>
+																	<p
+																		ng-show="perInfoForm.emailTx.$error.required  
+                                                          && perInfoForm.emailTx.$pristine"
+																		class="help-block">Please Enter the e-Mail Id</p>
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-3 ">
+																	<h5 for="PrimaryPhoneNo" classcontrol-label"="">Housing
+																		Status:*</h5>
+																</div>
+																<div class="col-sm-3 ">
+																	<h5 for="AlternatePhoneNO" classcontrol-label"="">Monthly
+																		Payment:*</h5>
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-3" data-effect="slide-right"
+																	ng-class="{'has-error': perInfoForm.hsSts.$error.required && perInfoForm.hsSts.$pristine}">
+																	<select class="form-control" id="housingStatusTxt"
+																		name="hsSts" required ng-model="housingStatus">
+																		<option value="">Housing Status</option>
+																		<option value="Own">Own</option>
+																		<option value="Rent">Rent</option>
+																		<option value="Lease">Lease</option>
+																		<option value="Other">Other.</option>
+																	</select>
+																	<p
+																		ng-show="perInfoForm.hsSts.$error.required  
+                                                          && perInfoForm.hsSts.$pristine"
+																		class="help-block">Please select a valid status</p>
+																</div>
+																<div class="col-sm-3"
+																	ng-class="{'has-error':perInfoForm.mntPay.$error.required && perInfoForm.mntPay.$pristine}">
+																	<input type="text" class="form-control" numbers-only
+																		placeholder="$" id="monthlyPayTxt" required
+																		name="mntPay" ng-model="monthlyPayment">
+																	<p
+																		ng-show="perInfoForm.mntPay.$error.required && perInfoForm.mntPay.$pristine"
+																		class="help-block">Please Enter a valid amount</p>
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-4 ">
+																	<h5 for="AnnualINcome" classcontrol-label"="">Annual
+																		Income *</h5>
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-4 "
+																	ng-class="{'has-error':perInfoForm.annInc.$error.required && perInfoForm.annInc.$pristine}">
+																	<input type="text" class="form-control" numbers-only
+																		placeholder="$" id="annualIncomeTxt" required
+																		ng-model="annualIncome" name="annInc">
+																	<p
+																		ng-show="perInfoForm.annInc.$error.required && perInfoForm.annInc.$pristine"
+																		class="help-block">Please Enter a valid income</p>
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="col-sm-10 ">
+
+																	<h5 for="AnnualINcome"classcontrol-label">Do you
+																		have other income you'd like considered?</h5>
+
+																</div>
+															</div>
+															<div class="row" style="padding-left: 15px;">
+																<div class="radiobtn">
+																	<div class="col-sm-8">
+
+																		<div class="col-sm-2">
+																			<input type="radio" name="OIoptionsRadios"
+																				id="OIoptionsRadios1" value="option2"
+																				ng-click="checkOtherIncome('true')">
+
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>Yes</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<input type="radio" name="OIoptionsRadios"
+																				id="OIoptionsRadios2" value="option2"
+																				checked="checked"
+																				ng-click="checkOtherIncome('false')">
+																		</div>
+																		<div class="col-sm-2">
+																			<h5>No</h5>
+																		</div>
+
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--  Starting of Employment Div -->
+													<div class="panel panel-primary" id="Emp">
+														<div class="panel-heading">
+															<label class="panel-title text-info">Employment</label>
+														</div>
+														<div class="panel-body" ng-form="empForm">
+															<form role="form" name="employeeForm">
+																<div class="row setup-content" id="step-1">
+
+																	<div class="col-xs-12">
+
+																		<div class="row">
+																			<div class="col-sm-5" data-effect="slide-right">
+																				<h5 for="FirstNmae"classcontrol-label">Employment
+																					Status:*</h5>
+																			</div>
+																			<div class="col-sm-7" data-effect="slide-right"></div>
+																		</div>
+
+																		<div class="row">
+
+																			<div class="col-sm-3"
+																				ng-class="{'has-error':empForm.empSts.$error.required && empForm.empSts.$pristine}">
+
+																				<select class="form-control" id="empStatusTxt"
+																					name="empSts" required ng-model="empStatus">
+																					<option value="">Select</option>
+																					<option value="Employed">Employed</option>
+																					<option value="Unemployed">Unemployed</option>
+																					<option value="Student">Student</option>
+																					<option value="Retired">Retired</option>
+																				</select>
+																				<p
+																					ng-show="empForm.empSts.$error.required && empForm.empSts.$pristine"
+																					class="help-block">Please select a valid
+																					Employment type</p>
+																			</div>
+
+																		</div>
+																		<div class="row">
+																			<div class="radiobtn">
+																				<div class="col-sm-12">
+
+																					<div class="col-sm-1">
+																						<input type="radio" class="form-control"
+																							name="emRadios" id="emRadios1" value="option3"
+																							ng-click="employmentType('sc','home')">
+																					</div>
+																					<div class="col-sm-2">
+																						<h5>Full-Time</h5>
+																					</div>
+																					<div class="col-sm-1">
+																						<input type="radio" class="form-control"
+																							name="emRadios" id="emRadios2" value="option3"
+																							ng-click="employmentType('sc','work')">
+																					</div>
+																					<div class="col-sm-2">
+																						<h5>Part-Time</h5>
+																					</div>
+																					<div class="col-sm-1">
+																						<input type="radio" class="form-control"
+																							name="emRadios" id="emRadios3" value="option3"
+																							ng-click="employmentType('sc','mobile')"
+																							checked="checked">
+																					</div>
+																					<div class="col-sm-2">
+																						<h5>Self Employed</h5>
+																					</div>
+
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-4"
+																				ng-class="{'has-error':empForm.compName.$error.required && empForm.compName.$pristine}"
+																				data-effect="slide-right">
+
+																				<input type="text" class="form-control" required
+																					ng-model="empName" placeholder="Employer Name*"
+																					id="companyname" name="compName">
+																				<p
+																					ng-show="empForm.compName.$error.required && empForm.compName.$pristine"
+																					class="help-block">Please Enter a valid Company
+																					Name</p>
+																			</div>
+																			<div class="col-sm-4"
+																				ng-class="{'has-error':empForm.title.$error.required && empForm.title.$pristine}">
+																				<input type="text" class="form-control" required
+																					ng-model="jobTitle" placeholder="Job Title*"
+																					id="jobTitle" name="title">
+																				<p
+																					ng-show="empForm.title.$error.required && empForm.title.$pristine"
+																					class="help-block">Please Enter a valid Title</p>
+																			</div>
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-8"
+																				ng-class="{'has-error':empForm.empAd1.$error.required && empForm.empAd1.$pristine}">
+																				<input type="text" class="form-control"
+																					ng-model="empAddressLine1" required
+																					placeholder="Employer Address line1*" id="EmpAddr1"
+																					name="empAd1">
+																				<p
+																					ng-show="empForm.empAd1.$error.required && empForm.empAd1.$pristine"
+																					class="help-block">Please Enter a valid Address</p>
+																			</div>
+
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-8">
+																				<input type="text" class="form-control"
+																					ng-model="empAddressLine2"
+																					placeholder="Employer Address line2" id="EmpAddr2">
+																			</div>
+
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-6"
+																				ng-class="{'has-error':empForm.empCity.$error.required && empForm.empCity.$pristine}">
+																				<input type="text" class="form-control" required
+																					ng-model="empCity" placeholder="City*"
+																					id="EmpAddr3" name="empCity">
+																				<p
+																					ng-show="empForm.empCity.$error.required && empForm.empCity.$pristine"
+																					class="help-block">Please Enter a valid City</p>
+																			</div>
+																			<div class="col-sm-4"
+																				ng-class="{'has-error':empForm.empState.$error.required && empForm.empState.$pristine}">
+																				<select class="form-control" id="EmpAddr4"
+																					name="empState" ng-model="empState" required>
+																					<option value="">State</option>
+																					<option value="AL">Alabama</option>
+																					<option value="AK">Alaska</option>
+																					<option value="AZ">Arizona</option>
+																					<option value="AR">Arkansas</option>
+																					<option value="CA">California</option>
+																					<option value="CO">Colorado</option>
+																					<option value="CT">Connecticut</option>
+																					<option value="DE">Delaware</option>
+																					<option value="DC">District Of Columbia</option>
+																					<option value="FL">Florida</option>
+																					<option value="GA">Georgia</option>
+																					<option value="HI">Hawaii</option>
+																					<option value="ID">Idaho</option>
+																					<option value="IL">Illinois</option>
+																					<option value="IN">Indiana</option>
+																					<option value="IA">Iowa</option>
+																					<option value="KS">Kansas</option>
+																					<option value="KY">Kentucky</option>
+																					<option value="LA">Louisiana</option>
+																					<option value="ME">Maine</option>
+																					<option value="MD">Maryland</option>
+																					<option value="MA">Massachusetts</option>
+																					<option value="MI">Michigan</option>
+																					<option value="MN">Minnesota</option>
+																					<option value="MS">Mississippi</option>
+																					<option value="MO">Missouri</option>
+																					<option value="MT">Montana</option>
+																					<option value="NE">Nebraska</option>
+																					<option value="NV">Nevada</option>
+																					<option value="NH">New Hampshire</option>
+																					<option value="NJ">New Jersey</option>
+																					<option value="NM">New Mexico</option>
+																					<option value="NY">New York</option>
+																					<option value="NC">North Carolina</option>
+																					<option value="ND">North Dakota</option>
+																					<option value="OH">Ohio</option>
+																					<option value="OK">Oklahoma</option>
+																					<option value="OR">Oregon</option>
+																					<option value="PA">Pennsylvania</option>
+																					<option value="RI">Rhode Island</option>
+																					<option value="SC">South Carolina</option>
+																					<option value="SD">South Dakota</option>
+																					<option value="TN">Tennessee</option>
+																					<option value="TX">Texas</option>
+																					<option value="UT">Utah</option>
+																					<option value="VT">Vermont</option>
+																					<option value="VA">Virginia</option>
+																					<option value="WA">Washington</option>
+																					<option value="WV">West Virginia</option>
+																					<option value="WI">Wisconsin</option>
+																					<option value="WY">Wyoming</option>
+																				</select>
+																				<p
+																					ng-show="empForm.empState.$error.required && empForm.empState.$pristine"
+																					class="help-block">Please select a valid State</p>
+																			</div>
+																			<div class="col-sm-2"
+																				ng-class="{'has-error':empForm.empZip.$error.required && empForm.empZip.$pristine}">
+																				<input type="text" class="form-control" required
+																					numbers-Only min="6" ng-model="empZipCode"
+																					placeholder="ZipCode*" id="EmpAddr5" name="empZip">
+																				<p
+																					ng-show="empForm.empZip.$error.required && empForm.empZip.$pristine"
+																					class="help-block">Please Enter a valid Zip code</p>
+																			</div>
+
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-6">
+																				<h5>Employer Phone*</h5>
+																			</div>
+
+
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-6"
+																				ng-class="{'has-error':empForm.EmpPhone.$error.required && empForm.EmpPhone.$pristine}">
+																				<input type="text" class="form-control" phone-input
+																					required ng-model="empPhone"
+																					placeholder="employer phone*" id="EmpPhone"
+																					name="EmpPhone">
+																				<p
+																					ng-show="empForm.EmpPhone.$error.required && empForm.EmpPhone.$pristine"
+																					class="help-block">Please Enter a valid Phone
+																					number</p>
+																			</div>
+
+
+																		</div>
+																		<div class="row">
+																			<div class="col-sm-9">
+																				<h5>How long have you worked with the current
+																					employer?*</h5>
+																			</div>
+
+
+																		</div>
+
+																		<div class="row">
+																			<div class="col-sm-12">
+
+																				<div class="col-sm-2"
+																					ng-class="{'has-error':empForm.yrsEmp.$error.required && empForm.yrsEmp.$pristine}">
+																					<input type="number" ng-model="empYear" id="yrsEmp"
+																						name="yrsEmp" required placeholder="Years" min="0"
+																						max="99">
+																					<p
+																						ng-show="empForm.yrsEmp.$error.required && empForm.yrsEmp.$pristine"
+																						class="help-block">Please Enter a valid year of
+																						employment</p>
+
+																				</div>
+																				<div class="col-sm-3">
+																					<h6>Years</h6>
+																				</div>
+																				<div class="col-sm-2"
+																					ng-class="{'has-error':empForm.monthsemp.$error.required && empForm.monthsemp.$pristine}">
+																					<input type="number" ng-model="empMonth" required
+																						min="0" max="11" name="monthsemp" id="monthsemp"
+																						placeholder="Months">
+																					<p
+																						ng-show="empForm.monthsemp.$error.required && empForm.monthsemp.$pristine"
+																						class="help-block">Please Enter a valid month</p>
+																				</div>
+																				<div class="col-sm-3">
+																					<h6>Months</h6>
+																				</div>
+
+
+																			</div>
+																		</div>
+																	</div>
+
+																</div>
+
+															</form>
+
+														</div>
+													</div>
+													<!--  End of Employment Div -->
+													<!--  Starting of Identity Div -->
+													<div class="panel panel-primary" id="Identity"
+														ng-form="identForm">
+														<div class="panel-heading">
+															<label class="panel-title text-info">Identity</label>
+														</div>
+														<div class="panel-body">
+															<div class="row setup-content" id="step-1">
+																<div class="col-xs-12">
+																	<p>Federal law requires that financial institutions
+																		obtain and verify personal information in order to
+																		open an account.EZ Bank will never share your
+																		identity information without your permission.</p>
+																	<div class="row">
+																		<div class="col-sm-3 ">
+																			<h5 for="PrimaryPhoneNo" classcontrol-label"="">Date
+																				of Birth:*</h5>
+																		</div>
+																		<div class="col-sm-5 ">
+																			<h5 for="AlternatePhoneNO" classcontrol-label"="">Social
+																				Security Number:*</h5>
+																		</div>
+																		<div class="col-sm-4 "></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-3" data-effect="slide-right"
+																			ng-class="{'has-error':identForm.dob.$error.required && identForm.dob.$pristine}">
+																			<input type="text" class="form-control"
+																				placeholder="mm/dd/yyyy" id="DOBTxt" name="dob"
+																				required ng-model="DOB">
+																			<p
+																				ng-show="identForm.dob.$error.required && identForm.dob.$pristine"
+																				class="help-block">Please Enter a valid DOB
+																				MM/DD/YYYY</p>
+																		</div>
+																		<div class="col-sm-3"
+																			ng-class="{'has-error':identForm.ssn.$error.required && identForm.ssn.$pristine}">
+																			<input type="text" class="form-control"
+																				placeholder="SSN" id="ssnTx" required numbers-only
+																				ng-model="SSN" name="ssn">
+																			<p
+																				ng-show="identForm.ssn.$error.required && identForm.ssn.$pristine"
+																				class="help-block">Please Enter a valid SSN</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-8" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Is
+																				the United States your country of permanent
+																				residence?*</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+
+																	<div class="row">
+																		<div class="radiobtn">
+																			<div class="col-sm-8">
+																				<div class="col-sm-2">
+																					<input type="radio" class="form-control"
+																						name="otherRadios" value="true"
+																						ng-click="checkCitizen('usCitizen','true')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>Yes</h5>
+																				</div>
+																				<div class="col-sm-2">
+																					<input type="radio" class="form-control"
+																						name="otherRadios" checked="checked" value="false"
+																						ng-click="checkCitizen('usCitizen','false')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>No</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-12" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Are
+																				you a current or former senior political figure, or
+																				a family member or close associate of one?*</h5>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="radiobtn">
+																			<div class="col-sm-8">
+																				<div class="col-sm-2">
+																					<input type="radio" class="form-control"
+																						name="optionsRadios" id="optionsRadios2"
+																						value="Yes"
+																						ng-click="checkCitizen('politician','true')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>Yes</h5>
+																				</div>
+																				<div class="col-sm-2">
+																					<input type="radio" class="form-control"
+																						name="optionsRadios" id="optionsRadios2"
+																						value="No" checked="checked"
+																						ng-click="checkCitizen('politician','false')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>No</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--  End of Identity Div -->
+													<!--  Starting of Ownership Div -->
+													<div class="panel panel-primary" id="Ownership">
+														<div class="panel-heading">
+															<label class="panel-title text-info">Ownership</label>
+														</div>
+														<div class="panel-body">
+
+															<form role="form">
+																<div class="row setup-content" id="step-1">
+
+																	<div class="col-xs-12">
+
+
+
+																		<div class="row">
+																			<div class="radiobtn">
+																				<div class="col-sm-1">
+																					<input type="radio" name="OwnoptionsRadios" ng-click="ownership('Individual')"
+																					checked="checked"	id="OwnershipoptionsRadios1" value="option2" >
+																				</div>
+																				<div class="col-sm-4">
+																					<h5>Individual - just me</h5>
+
+																				</div>
+
+																			</div>
+																		</div>
+
+																		<div class="row">
+																			<div class="radiobtn">
+																				<div class="col-sm-1">
+																					<input type="radio" name="OwnoptionsRadios" 
+																						id="OwnershipoptionsRadios2" value="option2" ng-click="ownership('Joint')">
+																				</div>
+
+																				<div class="col-sm-6">
+																					<h5>Joint - I want to own the account with
+																						another person 1</h5>
+																				</div>
+
+																			</div>
+																		</div>
+
+																		<div class="">
+																		<p style="    font-size: small;">		
+																		2 Income from
+																			alimony, child support, or separate maintenance
+																			income need not be revealed if you do not wish to
+																			have it considered as a basis for repaying this
+																			obligation. Please make sure you capture other types
+																			of income including salary and hourly wages,
+																			overtime, bonuses, public assistance, disability,
+																			pension, interest, dividends, self employment,
+																			commission, rental pay, social security, and
+																			retirement pay.</p></div>
+																	</div>
+
+																</div>
+
+															</form>
+														</div>
+
+
+													</div>
+													<!--  End of Ownership Div -->
+
+												</form>
+												<div class="row">
+													<div class="col-sm-10" data-effect="slide-right">
+														<input type="submit" class="btn" ng-click="reset()"
+
+															value="Reset">
+													</div>
+													<div class="col-sm-2" data-effect="slide-right">
+
+														<input type="submit" class="btn"
+															ng-click="perInfoForm.$valid && identForm.$valid && empForm.$valid &&  showVehicleTab()"
+
+															value="Next" id="nxtButton" name="buttonNxt">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- tab-Item-1-->
+									<!-- tab-Item-2-->
+									<div role="tabpanel" class="tab-pane fade in " id="tab2"
+										style="background-color: #f4f6f3;">
+										<div class="panel">
+											<div class="panel-body" style="background-color: #f2f2f2;">
+												<div class="panel panel-primary" id="AutoInfo">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Vehicle Info</h3>
+													</div>
+													<div class="panel-body">
+														<form role="form">
+															<div class="row setup-content" id="step-1"
+																ng-form="vehForm">
+																<div class="col-xs-12">
+																	<div class="row">
+																		<div class="col-sm-8" data-effect="slide-right">
+																			<h5 for="newUsed" classcontrol-label"="">New or
+																				Used *</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="radiobtn">
+																			<div class="col-sm-8">
+																				<div class="col-sm-2">
+																					<input type="radio" class="form-control"
+																						name="optionsRadios" id="optionsRadios2"
+																						value="option2" checked="checked"
+																						ng-click="checkCitizen('vehicle','New')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>New</h5>
+																				</div>
+																				<div class="col-sm-2">
+																					<input type="radio" class="form-control"
+																						name="optionsRadios" id="optionsRadios2"
+																						value="option2"
+																						ng-click="checkCitizen('vehicle','Used')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>Used</h5>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-2" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Year</h5>
+																		</div>
+																		<div class="col-sm-3" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Make</h5>
+																		</div>
+																		<div class="col-sm-2">
+																			<h5 for="FirstNmae" classcontrol-label"="">Model</h5>
+																		</div>
+																		<div class="col-sm-5"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-2" data-effect="slide-right" ng-class="{'has-error':vehForm.yearSelect.$error.required && vehForm.yearSelect.$pristine}">
+																			<select class="form-control" id="yearSelect" name="yearSelect" 
+																				ng-required="    true" ng-model="data.yearSelect"
+																				ng-change="getYear(data.yearSelect)">
+																				<option value="">Select</option>
+																				<option value="2016">2016</option>
+																				<option value="2017">2017</option>
+																			</select>
+																			<p
+																				ng-show="vehForm.yearSelect.$error.required && vehForm.yearSelect.$pristine"
+																				class="help-block">Please Select Year of Make</p>
+																		</div>
+																		<div class="col-sm-3" data-effect="slide-right" ng-class="{'has-error':vehForm.makeSelect.$error.required && vehForm.makeSelect.$pristine}">
+																			<select class="form-control" id="makeSelect"
+																				ng-required="    true" ng-model="data.makeSelect" name="makeSelect" 
+																				ng-change="loadModels(data.makeSelect)">
+																				<option value="">Select</option>
+																				<option value="Ford">Ford</option>
+																				<option value="GM">GM</option>
+																				<option value="Honda">Honda</option>
+																				<option value="Nissan">Nissan</option>
+																				<option value="Toyota">Toyota</option>
+																			</select>
+																			<p
+																				ng-show="vehForm.makeSelect.$error.required && vehForm.makeSelect.$pristine"
+																				class="help-block">Please Select Vehicle Make</p>
+
+																		</div>
+																		<div class="col-sm-2" ng-class="{'has-error':vehForm.modelSelect.$error.required && vehForm.modelSelect.$pristine}">
+																			<select class="form-control" id="modelSelect"
+																				required ng-model="data.modelSelect" name="modelSelect" 
+																				ng-change="loadMakes(data.modelSelect)">
+																				<option
+																					ng-repeat="option in carModels.availableOptions"
+																					value="{{option.vehicleModel}}">{{option.vehicleModel}}</option>
+																			</select>
+
+																			<p
+																				ng-show="vehForm.modelSelect.$error.required && vehForm.modelSelect.$pristine"
+																				class="help-block">Please Select Vehicle Model</p>
+																		</div>
+																		<div class="col-sm-5"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Vehicle
+																				Identification Number</h5>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-7" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.vin.$error.required && vehForm.vin.$pristine}">
+																			<input type="text" maxlength="17"
+																				onkeypress="return isNumberKey(event)"
+																				class="form-control" allow-pattern="(\d|[a-z])"
+																				placeholder="" id="VINTxt" required name="vin"
+																				ng-model="VIN">
+																			<p
+																				ng-show="vehForm.vin.$error.required && vehForm.vin.$pristine"
+																				class="help-block">Please Enter a valid VIN</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Estimated
+																				Value</h5>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-3" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.estmValue.$error.required && vehForm.estmValue.$pristine}">
+																			<input type="text" class="form-control" numbers-only
+																				placeholder="" id="estValTxt" required
+																				name="estmValue" ng-model="estValue">
+																			<p
+																				ng-show="vehForm.estmValue.$error.required && vehForm.estmValue.$pristine"
+																				class="help-block">Please Enter a valid Amount</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Approximate
+																				Mileage</h5>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-3" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.apxMil.$error.required && vehForm.apxMil.$pristine}">
+																			<input type="text" class="form-control" name="apxMil"
+																				numbers-only placeholder="" id="approxMilTxt"
+																				required ng-model="milage">
+																			<p
+																				ng-show="vehForm.apxMil.$error.required && vehForm.apxMil.$pristine"
+																				class="help-block">Please Enter a valid Amount</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Registration
+																				State*</h5>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.regSt.$error.required && vehForm.regSt.$pristine}">
+																			<select class="form-control" id="regStateTxt"
+																				name="regSt" required ng-model="regState">
+																				<option value="">State</option>
+																				<option value="AL">Alabama</option>
+																				<option value="AK">Alaska</option>
+																				<option value="AZ">Arizona</option>
+																				<option value="AR">Arkansas</option>
+																				<option value="CA">California</option>
+																				<option value="CO">Colorado</option>
+																				<option value="CT">Connecticut</option>
+																				<option value="DE">Delaware</option>
+																				<option value="DC">District Of Columbia</option>
+																				<option value="FL">Florida</option>
+																				<option value="GA">Georgia</option>
+																				<option value="HI">Hawaii</option>
+																				<option value="ID">Idaho</option>
+																				<option value="IL">Illinois</option>
+																				<option value="IN">Indiana</option>
+																				<option value="IA">Iowa</option>
+																				<option value="KS">Kansas</option>
+																				<option value="KY">Kentucky</option>
+																				<option value="LA">Louisiana</option>
+																				<option value="ME">Maine</option>
+																				<option value="MD">Maryland</option>
+																				<option value="MA">Massachusetts</option>
+																				<option value="MI">Michigan</option>
+																				<option value="MN">Minnesota</option>
+																				<option value="MS">Mississippi</option>
+																				<option value="MO">Missouri</option>
+																				<option value="MT">Montana</option>
+																				<option value="NE">Nebraska</option>
+																				<option value="NV">Nevada</option>
+																				<option value="NH">New Hampshire</option>
+																				<option value="NJ">New Jersey</option>
+																				<option value="NM">New Mexico</option>
+																				<option value="NY">New York</option>
+																				<option value="NC">North Carolina</option>
+																				<option value="ND">North Dakota</option>
+																				<option value="OH">Ohio</option>
+																				<option value="OK">Oklahoma</option>
+																				<option value="OR">Oregon</option>
+																				<option value="PA">Pennsylvania</option>
+																				<option value="RI">Rhode Island</option>
+																				<option value="SC">South Carolina</option>
+																				<option value="SD">South Dakota</option>
+																				<option value="TN">Tennessee</option>
+																				<option value="TX">Texas</option>
+																				<option value="UT">Utah</option>
+																				<option value="VT">Vermont</option>
+																				<option value="VA">Virginia</option>
+																				<option value="WA">Washington</option>
+																				<option value="WV">West Virginia</option>
+																				<option value="WI">Wisconsin</option>
+																				<option value="WY">Wyoming</option>
+																			</select>
+																			<p
+																				ng-show="vehForm.regSt.$error.required && vehForm.regSt.$pristine"
+																				class="help-block">Please select a valid State</p>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Transaction
+																				Type*</h5>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.txType.$error.required && vehForm.txType.$pristine}">
+																			<select class="form-control" id="TxTypeTxt"
+																				name="txType" required ng-model="transactionType">
+																				<option value="">Select</option>
+																				<option value="Dealer">Dealer</option>
+																				<option value="Other">Other.</option>
+																			</select>
+																			<p
+																				ng-show="vehForm.txType.$error.required && vehForm.txType.$pristine"
+																				class="help-block">Please select a valid Type</p>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Dealer</h5>
+																		</div>
+																		<div class="col-sm-7" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-7" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.dealerNm.$error.required && vehForm.dealerNm.$pristine}">
+																			<input type="text" class="form-control"
+																				name="dealerNm" placeholder="Dealer Name"
+																				id="sellerNameTxt" required ng-model="dealerName">
+																			<p
+																				ng-show="vehForm.dealerNm.$error.required && vehForm.dealerNm.$pristine"
+																				class="help-block">Please Enter a valid Dealer
+																				Name</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-7" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.dlAdd.$error.required && vehForm.dlAdd.$pristine}">
+																			<input type="text" class="form-control" name="dlAdd"
+																				placeholder="Street Address" id="sellerAddr1Txt"
+																				required ng-model="dealerAddress">
+																			<p
+																				ng-show="vehForm.dlAdd.$error.required && vehForm.dlAdd.$pristine"
+																				class="help-block">Please Enter a valid Dealer
+																				Name</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-5" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.dlCity.$error.required && vehForm.dlCity.$pristine}">
+																			<input type="text" class="form-control"
+																				placeholder="City" id="sellerAddr2Txt" name="dlCity"
+																				required ng-model="dealerCity">
+																			<p
+																				ng-show="vehForm.dlCity.$error.required && vehForm.dlCity.$pristine"
+																				class="help-block">Please Enter a valid Dealer
+																				City</p>
+																		</div>
+																		<div class="col-sm-5" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.dlSt.$error.required && vehForm.dlSt.$pristine}">
+																			<select class="form-control" id="sellerAddr3Txt"
+																				name="dlSt" required ng-model="delearState">
+																				<option value="">State</option>
+																				<option value="AL">Alabama</option>
+																				<option value="AK">Alaska</option>
+																				<option value="AZ">Arizona</option>
+																				<option value="AR">Arkansas</option>
+																				<option value="CA">California</option>
+																				<option value="CO">Colorado</option>
+																				<option value="CT">Connecticut</option>
+																				<option value="DE">Delaware</option>
+																				<option value="DC">District Of Columbia</option>
+																				<option value="FL">Florida</option>
+																				<option value="GA">Georgia</option>
+																				<option value="HI">Hawaii</option>
+																				<option value="ID">Idaho</option>
+																				<option value="IL">Illinois</option>
+																				<option value="IN">Indiana</option>
+																				<option value="IA">Iowa</option>
+																				<option value="KS">Kansas</option>
+																				<option value="KY">Kentucky</option>
+																				<option value="LA">Louisiana</option>
+																				<option value="ME">Maine</option>
+																				<option value="MD">Maryland</option>
+																				<option value="MA">Massachusetts</option>
+																				<option value="MI">Michigan</option>
+																				<option value="MN">Minnesota</option>
+																				<option value="MS">Mississippi</option>
+																				<option value="MO">Missouri</option>
+																				<option value="MT">Montana</option>
+																				<option value="NE">Nebraska</option>
+																				<option value="NV">Nevada</option>
+																				<option value="NH">New Hampshire</option>
+																				<option value="NJ">New Jersey</option>
+																				<option value="NM">New Mexico</option>
+																				<option value="NY">New York</option>
+																				<option value="NC">North Carolina</option>
+																				<option value="ND">North Dakota</option>
+																				<option value="OH">Ohio</option>
+																				<option value="OK">Oklahoma</option>
+																				<option value="OR">Oregon</option>
+																				<option value="PA">Pennsylvania</option>
+																				<option value="RI">Rhode Island</option>
+																				<option value="SC">South Carolina</option>
+																				<option value="SD">South Dakota</option>
+																				<option value="TN">Tennessee</option>
+																				<option value="TX">Texas</option>
+																				<option value="UT">Utah</option>
+																				<option value="VT">Vermont</option>
+																				<option value="VA">Virginia</option>
+																				<option value="WA">Washington</option>
+																				<option value="WV">West Virginia</option>
+																				<option value="WI">Wisconsin</option>
+																				<option value="WY">Wyoming</option>
+																			</select>
+																			<p
+																				ng-show="vehForm.dlSt.$error.required && vehForm.dlSt.$pristine"
+																				class="help-block">Please select a valid Dealer
+																				State</p>
+																		</div>
+																		<div class="col-sm-2" data-effect="slide-right"
+																			ng-class="{'has-error':vehForm.dlZip.$error.required && vehForm.dlZip.$pristine}">
+																			<input type="text" class="form-control"
+																				placeholder="Zip Code*" id="sellerAddr4Txt"
+																				numbers-only required ng-model="delearzipcode"
+																				name="dlZip">
+																			<p
+																				ng-show="vehForm.dlZip.$error.required && vehForm.dlZip.$pristine"
+																				class="help-block">Please Enter a valid Dealer
+																				Zipcode</p>
+																			<p
+																				ng-show="vehForm.dlZip.$error.valid && vehForm.dlZip.$pristine"
+																				class="help-block">Please Enter a valid Dealer
+																				Zipcode</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<!--  End of Vehicle Info -->
+												<div class="panel panel-primary" id="LoanInfo">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Loan Information</h3>
+													</div>
+													<div class="panel-body">
+														<form role="form">
+															<div class="row setup-content" id="step-1">
+																<div class="col-xs-12" ng-form="loanForm">
+																	<div class="row">
+																		<div class="col-sm-8" data-effect="slide-right">
+																			<h5 for="newUsed" classcontrol-label"="">Requested
+																				Loan Amount*</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-3" data-effect="slide-right"
+																			ng-class="{'has-error':loanForm.lnAmt.$error.required && loanForm.lnAmt.$pristine}">
+																			<input type="text" class="form-control" numbers-only
+																				placeholder="$" id="loanAmtTxt" required
+																				name="lnAmt" ng-model="loanAmt">
+																			<p
+																				ng-show="loanForm.lnAmt.$error.required && loanForm.lnAmt.$pristine"
+																				class="help-block">Please Enter a valid Loan
+																				Amount</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-8" data-effect="slide-right">
+																			<h5 for="newUsed"classcontrol-label">Will any of
+																				these funds be used outside the U.S.? *</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="radiobtn">
+																			<div class="col-sm-8">
+
+																				<div class="col-sm-2">
+																					<input type="radio" name="optionsRadios"
+																						ng-click="CheckUsedOutsideUS('true')"
+																						id="optionsRadios2" value="option2">
+
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>Yes</h5>
+																				</div>
+																				<div class="col-sm-2">
+																					<input type="radio" name="optionsRadios"
+																						id="optionsRadios2" value="option2"
+																						checked="checked"
+																						ng-click="CheckUsedOutsideUS('false')">
+																				</div>
+																				<div class="col-sm-2">
+																					<h5>No</h5>
+																				</div>
+
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="radiobtn"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-8" data-effect="slide-right">
+																			<h5 for="newUsed" classcontrol-label"="">Requested
+																				Loan Term*</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+
+																		<div class="col-sm-3" data-effect="slide-right">
+																			<select class="form-control" id="loanTerm2Txt"
+																				ng-model="termYears">
+																				<option value="">Terms</option>
+																				<option value="5">5</option>
+																				<option value="10">10</option>
+																				<option value="15">15</option>
+																				<option value="20">20</option>
+																			</select>
+																		</div>
+																		<div class="col-sm-3" data-effect="slide-right">
+																			<select class="form-control" id="loanTerm1Txt"
+																				ng-model="term">
+																				<option value="">Select</option>
+																				<option value="5">Months</option>
+																				<option value="10">Years</option>
+																			</select>
+																		</div>
+																		<div class="col-sm-6" data-effect="slide-right"></div>
+																	</div>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-10" data-effect="slide-right">
+												<input type="submit" class="btn" ng-click="resetVehicle()"
+													value="Reset">
+
+											</div>
+											<div class="col-sm-2" data-effect="slide-right">
+												<input type="submit"
+													ng-click="loanForm.$valid &&  vehForm.$valid && showSummary()"
+													class="btn" value="Next" id="nxtButton1" name="buttonNxt1">
+
+											</div>
+										</div>
+									</div>
+									<!-- tab-Item-2-->
+									<!-- tab-Item-3-->
+									<div role="tabpanel" class="tab-pane fade in" id="tab3"
+										style="background-color: #f4f6f3;">
+										<div class="panel">
+											<div class="panel-body" style="background-color: #f2f2f2;">
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Account</h3>
+													</div>
+													<div class="panel-body">
+														<form role="form">
+															<div class="row setup-content" id="step-1">
+																<div class="col-xs-12">
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Account
+																				Ownership</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<a ng-click="showPersonalTab()" data-toggle="tab">Edit</a>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Individual
+																				Application</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Primary
+																				Applicant</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<a ng-click="showPersonalTab()">Edit</a>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Full Legal Name:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="fullLegalName">{{caption}}
+																				{{firstName}} {{lastName}} </label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Residential Address:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="resAddr">{{address1}}
+																				{{address2}}, {{city}} {{state}} {{zipcode}} </label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae"></h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Country of Residence:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="country">Other</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae"></h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Time at current address:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="timeAtres">{{yearLived}} years
+																				{{monthLived}} months</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Housing Status:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="housingStatus">{{housingStatus}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Monthly Housing Payment:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="monthlyPay">{{monthlyPayment}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Annual Income:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="annualIncome"> {{annualIncome}} </label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Primary Phone Number:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="pyPhone">{{primaryPhone}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Email Address:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="email">{{email}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae"classcontrol-label">Employment</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<a ng-click="showPersonalTab()">Edit</a>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+
+
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Employment Status:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="empStatus">{{empStatus}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Employer Name:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="jobOccupation">{{empName}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Job Occupation:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="jobOccupation">{{jobTitle}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Employer Address:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="empAddr">{{empAddressLine1}}
+																				{{empAddressLine1}} {{empCity}} {{empState}}
+																				{{empZipCode}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Employer Phone:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="empPh">{{empPhone}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+
+
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Time at current employer:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="empTime">{{empYear}} Years
+																				{{empMonth}} Months</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Identity</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<a ng-click="showPersonalTab()">Edit</a>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Date of Birth:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="DOB">{{DOB}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Social Security Number:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="ssn">{{SSN}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">United States Citizen:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="USCitizen">{{usCitizen}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<label for="FirstNmae"classcontrol-label">Loan
+																				Information</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<a href="NewApplication.html#LoanInfo">Edit</a>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Requested Loan Term:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="loanTerm">{{termYears}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Requested Loan Amount:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="loanAmt">{{loanAmt}}</label>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae" classcontrol-label"="">Auto
+																				Information</h5>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<a target="_blank" ng-click="showVehicleTab()">Edit</a>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Year,Make, Model:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="YrMkModel">{{year}}, {{make}},
+																				{{model}} </label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">New or Used:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="NewOrUsed">{{vehicleType}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Vehicle Identification
+																				Number:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="VIN">{{VIN}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Estimated Value:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="EstVal">{{estValue}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Approximate Mileage:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="ApproxMil">{{milage}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Registration State:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="RegState">{{regState}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Transaction Type:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="Txtype">{{transactionType}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Dealer Name:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="SellerName">{{dealerName}}</label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<div class="row">
+																		<div class="col-sm-4" data-effect="slide-right">
+																			<h5 for="FirstNmae">Dealer Address:</h5>
+																		</div>
+																		<div class="col-sm-4">
+																			<label id="SellerAddr">{{delearAddress}}
+																				{{delearCity}} {{delearState}} {{delearzipcode}} </label>
+																		</div>
+																		<div class="col-sm-4" data-effect="slide-right"></div>
+																	</div>
+																	<!-- End of the  -->
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Closing Branch</h3>
+													</div>
+
+													<div class="panel-body">
+														<form role="form">
+															<div class="row">
+																<div class="col-md-8">
+																	<div id="BranchAddress" class="container">
+																		<h3>Branch Address</h3>
+																		<div class="row-fluid">
+																			<div class="span8">
+
+																				<iframe width="600" height="450" ng-show="zip1"
+																					frameborder="0" style="border: 0"
+																					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ8eqJdfy3w4kRk7KmfQlvwc8&key=AIzaSyBROy5W1oWxGVWmV-th4xD2fR6VnJBmYY0"
+																					allowfullscreen></iframe>
+
+																				<iframe width="600" height="450" ng-show="zip2"
+																					frameborder="0" style="border: 0"
+																					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJmeAP7szHw4kR8EXSwhSM78o&key=AIzaSyBROy5W1oWxGVWmV-th4xD2fR6VnJBmYY0"
+																					allowfullscreen></iframe>
+
+																				<iframe width="600" height="450" ng-show="zip3"
+																					frameborder="0" style="border: 0"
+																					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJjZL_DKcayYcRkS5ae5t80CI&key=AIzaSyBROy5W1oWxGVWmV-th4xD2fR6VnJBmYY0"
+																					allowfullscreen></iframe>
+
+																				<iframe width="600" height="450" ng-show="zip4"
+																					frameborder="0" style="border: 0"
+																					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ2S9yntKwJIgRsyuKTudIsBM&key=AIzaSyBROy5W1oWxGVWmV-th4xD2fR6VnJBmYY0"
+																					allowfullscreen></iframe>
+
+																				<iframe width="600" height="450" ng-show="zip5"
+																					frameborder="0" style="border: 0"
+																					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJUcV8iDFXwokRepezoPosTwA&key=AIzaSyBROy5W1oWxGVWmV-th4xD2fR6VnJBmYY0"
+																					allowfullscreen></iframe>
+																			</div>
+
+
+																			<div class="span4">
+
+																				<h3>EZ Bank</h3>
+
+																				<address id="closeBranchAddr">
+
+																					<strong>{{branchName}}</strong> <label>{{branchApartmentNo}}</label>
+																					<label>{{branchStreet}}</label> <label>{{branchCity}}</label>
+																					<label>{{branchState}}</label> <label>{{branchZip}}</label>
+																					<abbr title="Phone">P:</abbr><label>{{branchPhone}}</label>
+
+																				</address>
+
+																			</div>
+
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Disclosure</h3>
+													</div>
+													<div class="panel-body">
+														<div class="row setup-content" id="step-1">
+															<p align="center">Secured Installment Loan Terms &
+																Conditions</p>
+															<p style="    font-size: xx-small;">
+																           Note: If married,you may apply for a seperate account in
+																your name.If you reside in a community property
+																state,such as, California,Idaho,Nevada,Washington,or
+																Wisconsin,the assests of your marital community will be
+																liable in the account even if you apply for a seperate
+																account and this application is not signed by your
+																spouse(unless you submit a statement that you wish to
+																apply, for a seperate account based solely on your
+																seperate assets).If you reside in community proprty
+																state,credit extended under this account will be
+																incurred for a community benefit.Note:In case
+																of a joint account,each applicant will have the right to
+																use the account to the extent of the credit limit on the
+																account and will be liable for all credit extended under
+																the account to any co-applicant.An early
+																closure fee of 1% of the original loan amount applies if
+																the account is closed within 1 year, witha $50 minimum
+																and $100 maximum.
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Authorize Credit
+															Evaluation</h3>
+													</div>
+													<div class="panel-body">
+														<div class="row setup-content" id="step-1">
+															<p style="    font-size: xx-small;">
+																I pledge that 1)To the best of my knowledge the
+																application information provided is true and
+																complete.2)I am the individual to whom this information
+																pertains, and that I obtained approval from my
+																co-applicant to submit his or her information.3)If I am
+																applying with a co-applicant,I intend to apply for
+																credit,however the co-applicant and I will be jointly
+																liable for the requested credit amount.<br> I
+																authorize:1)EZ Bank to gather credit information about
+																me.2)EZ Bank to obtain a customer report(credit
+																report) from a consumer reporting agency(credit
+																bureau)in connection with this application.<br> I
+																understandthat: 1)Federal law requires the lender to
+																obtain,verify and record information about each
+																applicant in order to verify each applicant's
+																identity.The lender may also ask for documents to verify
+																the identity of some or all applicants.2)This
+																application and supporting documents remain the property
+																of the lender.3)EZ bank is not obliged to approve my
+																application.All loan applications are subject to normal
+																credit qualification.
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Electronic Document
+															Opt-In for Auto Loan</h3>
+													</div>
+													<div class="panel-body">
+														<div class="row setup-content" id="step-1">
+															<p style="    font-size: xx-small;">You have the option to receive your documents and
+																disclosures for your new EZ bank auto loan account
+																electronically.If you would like to opt in to go
+																paperless,please check the box below and confirm your
+																email address.</p>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<h3 class="panel-title text-info">Consent &amp;
+															Acceptance</h3>
+													</div>
+													<div class="panel-body">
+														<div class="checkbox">
+															<div class="row setup-content" id="step-1">
+																<div class="col-md-2" align="right">
+																	<input type="checkbox" ng-model="disclosures" name="discChk">
+																</div>
+																<div class="col-md-10">
+																	<p class="hidden-sm hidden-xs">I,
+																		{{firstName}}{{lastName}}, would like to receive my
+																		documents and disclosures electronically.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-10" data-effect="slide-right"></div>
+											<div class="col-sm-2" data-effect="slide-right">
+
+												<input type="button" class="btn" value="Submit" id="btnSubmit" name="submitBtn" 
+
+													 ng-click="savePersonelInfo()"
+													data-toggle="tooltip"
+													title="Please accept the documents and disclosures">
+											</div>
+										</div>
+									</div>
+									<!-- tab-Item-3-->
+
+
+
+									<!-- tab-Item-4-->
+							<div role="tabpanel" class="tab-pane fade in" id="tab4"
+
+										style="background-color: #f4f6f3;">
+										<div class="panel-body" style="background-color: #f2f2f2;">
+
+											<div class="col-md-12">
+
+												<label for="thanks" class="control-label">Thanks for
+													choosing EZ bank. Below is a summary of what you applied
+													for and next steps.</label>
+											</div>
+											<div class="col-md-12">
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<label for="sec" class="control-label">Product
+															Application Information</label>
+													</div>
+													<div class="panel-body">
+														<div class="col-md-4">
+															<b>EZ Bank Auto Loan</b>
+														</div>
+														<div class="col-md-8">
+															<label for="review" class="control-label">Your
+																application is being reviewed</label>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-md-12">
+												<div class="panel panel-primary">
+													<div class="panel-heading">
+														<label for="sec" class="control-label">What You
+															Can Expect Next</label>
+													</div>
+													<div class="panel-body">
+														<div class="col-md-4">
+															<b>EZ Bank Auto Loan</b>
+														</div>
+														<div class="col-md-8">
+															<label for="review" class="control-label">You'll
+																receive a letter from us explaining the results of your
+																application</label>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-md-12" align="left">
+												<form class="form-horizontal" role="form">
+													<button ng-click="reviewApplication()" id="btnviewApp" name="viewApp" 
+														class="btn btn-info btn-lg btn btn-primary center-block">View
+														Application Status</button>
+													<!--                                               <a  target="_blank" href="NewGettingStarted.html"><i class="fa fa-plus-circle"></i> Apply Now</a> -->
+												</form>
+											</div>
+										</div>
+									</div>
+									<!-- tab-Item-4-->
+
+									<!-- End tab-content -->
+									<div class="divisor-line"></div>
+								</div>
+								<!--Aside - mini and full boxes -->
+								<!-- End Aside - mini and full boxes -->
+							</div>
+							<!--Aside - mini and full boxes -->
+							<aside class="col-md-3">
+								<!-- contact-list-->
+								<div class="contact-list-container">
+									<ul class="contact-list">
+										<li>
+											<h4>
+												<i class="fa fa-envelope-o"></i>Email:
+											</h4> <a href="#">Contact Customer Service</a>
+										</li>
+
+										<li>
+											<h4>
+												<i class="fa fa-fax"></i>Phones:
+											</h4>
+											<h5>Miami:</h5>
+											<p>447 50 12</p>
+											<h5>Number Single National</h5>
+											<p>02 4000 4 56234</p>
+										</li>
+
+										<li>
+											<h4>
+												<i class="fa fa-life-ring"></i>Care centers:
+											</h4> <a href="#"><i class="fa fa-arrow"></i> <i
+												class="fa fa-arrow-circle-o-right"></i> Offices </a> <a href="#"><i
+												class="fa fa-arrow"></i> <i
+												class="fa fa-arrow-circle-o-right"></i>Cashiers </a> <a href="#"><i
+												class="fa fa-arrow"></i> <i
+												class="fa fa-arrow-circle-o-right"></i> Point friend </a>
+										</li>
+									</ul>
+								</div>
+								<!-- End contact-list-->
+
+								<h4>Interesting links</h4>
+
+								<!-- services-mini-boxes-->
+								<div class="services-mini-boxes">
+									<!-- mini-box Item-->
+									<div class="mini-box">
+										<h5>Taxes</h5>
+										<div class="number-mini-box">01</div>
+										<div class="icon-mini-box color-bg-1">
+											<i class="fa fa-calculator"></i>
+										</div>
+									</div>
+									<!-- End mini-box Item -->
+
+									<!-- mini-box Item -->
+									<div class="mini-box">
+										<h5>Portfolio</h5>
+										<div class="number-mini-box">02</div>
+										<div class="icon-mini-box color-bg-2">
+											<i class="fa fa-briefcase"></i>
+										</div>
+									</div>
+									<!-- End mini-box Item -->
+
+									<!-- mini-box Item-->
+									<div class="mini-box">
+										<h5>Security</h5>
+										<div class="number-mini-box">03</div>
+										<div class="icon-mini-box color-bg-3">
+											<i class="fa fa-lock"></i>
+										</div>
+									</div>
+									<!-- End mini-box Item -->
+
+									<!-- mini-box Item -->
+									<div class="mini-box">
+										<h5>Education</h5>
+										<div class="number-mini-box">04</div>
+										<div class="icon-mini-box color-bg-4">
+											<i class="fa fa-graduation-cap"></i>
+										</div>
+									</div>
+									<!-- End mini-box Item -->
+								</div>
+								<!-- End services-mini-boxes-->
+
+								<h4>Download Our App</h4>
+
+								<!-- services-full-boxes-->
+								<div class="services-full-boxes">
+									<!-- full-box Item-->
+									<div class="full-box">
+										<div class="info-full-box">
+											<a href="#">Download Android App</a>
+										</div>
+										<div class="icon-full-box">
+											<i class="fa fa-android"></i>
+										</div>
+									</div>
+									<!-- End full-box  Item-->
+
+									<!-- full-box Item-->
+									<div class="full-box">
+										<div class="info-full-box">
+											<a href="#">Download Apple App</a>
+										</div>
+										<div class="icon-full-box">
+											<i class="fa fa-apple"></i>
+										</div>
+									</div>
+									<!-- End full-box  Item-->
+
+									<!-- full-box Item-->
+									<div class="full-box no-margin">
+										<div class="info-full-box">
+											<a href="#">Windows App</a>
+										</div>
+										<div class="icon-full-box">
+											<i class="fa fa-windows"></i>
+										</div>
+									</div>
+									<!-- End full-box  Item-->
+								</div>
+								<!-- End services-full-boxes-->
+							</aside>
+							<!-- End Aside - mini and full boxes -->
+						</div>
+						<!-- End Container Area - Boxes Services -->
+					</div>
+
+					<!-- End Info Content - Principal Info-->
+				</div>
+				<!-- End Content Breadcumbs And Slide-->
+			</div>
+		</div>
+	</div>
+	<!-- End Container Area - Slide and tabs -->
+</div>
+<!-- End content-central-->
+<!-- footer-->
+<footer id="footer">
+
+	<!-- Items Footer -->
+	<div class="container">
+		<div class="row paddings-mini">
+			<!-- contact Items Footer -->
+			<div class="col-sm-6 col-md-3">
+				<div class="border-right txt-right">
+					<h4>Contact us</h4>
+					<ul class="contact-footer">
+						<li><i class="fa fa-envelope"></i> <a href="#">sales@coopbank.com</a>
+						</li>
+						<li><i class="fa fa-headphones"></i> <a href="#">55-5698-4589</a>
+						</li>
+						<li class="location"><i class="fa fa-home"></i> <a href="#">
+								Av new stret - New York</a></li>
+					</ul>
+					<div class="logo-footer">
+						<div class="icon-logo">
+							<i class="fa fa-university"></i>
+						</div>
+						<a href="index.html"> EZ Bank <span>Your money is safe.</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- End contact items Footer -->
+
+			<!-- Recent Links Items Footer -->
+			<div class="col-sm-6 col-md-3">
+				<div class="border-right border-right-none">
+					<h4>Recent Links</h4>
+					<ul class="list-styles">
+						<li><i class="fa fa-check"></i> <a href="#">Corporate Web
+								EZBank</a></li>
+						<li><i class="fa fa-check"></i> <a href="#">EZBank
+								Innovation Center</a></li>
+						<li><i class="fa fa-check"></i> <a href="#">Corporate
+								Responsibility</a></li>
+						<li><i class="fa fa-check"></i> <a href="#">Information
+								of interest</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End Recent Links Items Footer -->
+
+			<!-- Recent Newsletter Footer -->
+			<div class="col-sm-6 col-md-4">
+				<div class="border-right txt-right">
+					<h4>Newsletter</h4>
+					<p>Please enter your e-mail and subscribe to our newsletter.</p>
+					<form id="newsletterForm" class="newsletterForm"
+						action="php/mailchip/newsletter-subscribe.php">
+						<div class="input-group">
+							<span class="input-group-addon"> <i class="fa fa-envelope"></i>
+							</span> <input class="form-control" placeholder="Email Address"
+								name="email" type="email" required="required"> <span
+								class="input-group-btn">
+								<button class="btn btn-primary" type="submit" name="subscribe">Go!</button>
+							</span>
+						</div>
+					</form>
+					<div id="result-newsletter"></div>
+				</div>
+			</div>
+			<!-- End Newsletter Footer -->
+
+			<!-- Follow Items Footer -->
+			<div class="col-sm-6 col-md-2">
+				<div class="border-right-none">
+					<h4>Follow To EZBank</h4>
+					<ul class="social">
+						<li class="facebook"><span><i class="fa fa-facebook"></i></span><a
+								href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+							<li class="twitter"><span><i class="fa fa-twitter"></i></span><a
+								href="https://twitter.com/" target="_blank">Twitter</a></li>
+							<li class="github"><span><i class="fa fa-github"></i></span><a
+								href="https://github.com/" target="_blank">Github</a></li>
+							<li class="linkedin"><span><i class="fa fa-linkedin"></i></span><a
+								href="https://www.linkedin.com/" target="_blank">Linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End Follow Items Footer -->
+		</div>
+	</div>
+	<!-- End Items Footer -->
+	<!-- footer Down-->
+	<div class="footer-down">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<!-- Nav Footer-->
+					<ul class="nav-footer">
+						<li><a target="_blank" href="#">HOME</a></li>
+						<li><a target="_blank" href="#">COMPANY</a></li>
+						<li><a target="_blank" href="#">SERVICES</a></li>
+						<li><a target="_blank" href="#">NEWS</a></li>
+						<li><a target="_blank" href="#">PORTFOLIO</a></li>
+						<li><a target="_blank" href="#">CONTACT</a></li>
+					</ul>
+					<!-- End Nav Footer-->
+				</div>
+				<div class="col-md-5">
+					<p>© 2015 EZBank. All Rights Reserved. 2010 - 2016</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer Down-->
+</footer>
+<!-- End footer-->
+</div>
+<!-- End layout-->
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery('.tp-banner').show().revolution({
+        dottedOverlay : "none",
+        delay : 5000,
+        startwidth : 1170,
+        startheight : 490,
+        minHeight : 350,
+        navigationType : "none",
+        navigationArrows : "solo",
+        navigationStyle : "preview"
+      });
+      
+             $('#toTop').click(function () {
+            $('#toTop').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    }); //ready
+  </script>
+<!--End Slider Function-->
+
+<a target="_blank" href="" id="toTop" style="display: block;"> <span
+	id="toTopHover" style="opacity: 0;"></span>To Top
+
+</a>
+

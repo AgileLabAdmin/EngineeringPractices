@@ -1,0 +1,12 @@
+.git/
+.idea/
+.tmp/
+libs/
+common/
+src/
+node_modules/
+.editorconfig
+.gitattributes
+.gitignore
+.jshintrc
+.travis.yml
