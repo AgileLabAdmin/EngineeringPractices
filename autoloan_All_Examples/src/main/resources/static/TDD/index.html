@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Auto Loan Procesing - TDD Results</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/overwrite.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/c3.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <span class="glyphicon glyphicon-list-alt navbar-brand"/>
+        </div>
+        <h3 class="navbar-text">Auto Loan Procesing</h3>
+        <h4 class="nav navbar-nav navbar-text ow-sub-title">TDD Results</h4>
+      </div>
+    </nav>
+    <div class="container-fluid position-offset">
+      <div class="row">
+        <div class="col-xs-2 sidebar-offcanvas" id="sidebar" role="navigation">
+          <ul class="nav nav-sidebar">
+            <li class="active top">
+              <a href="#">Overview</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main">
+          <div id="chart"></div>
+          <ul class="nav nav-tabs" id="myTab"></ul>
+          <div class="tab-content" id="myTabContent">
+            
+            <div class="tab-pane fade" id="PhantomJS">
+              <table class="table table-bordered table-hover">
+                <caption class="">Test Results running in PhantomJS 2.1.1 (Windows 7 0.0.0) Timestamp: 11/1/2017, 7:48:35 PM</caption>
+                <tr>
+                  <td colspan="3">
+                    23 tests / 
+                    0 errors / 
+                    1 failures / 
+                    0 skipped / 
+                    runtime: 0.088s
+                  </td>
+                </tr>
+                <tr class="header">
+                  <td>Status</td>
+                  <td>Spec</td>
+                  <td>Suite / Results</td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.025s</td>
+                  <td>should navigate to new application</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.018s</td>
+                  <td>should be defined</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; Check the Numbersonly directive for ignoring alphabets</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>The Monthly income should be calculated based on the annual income</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCalculateMonthlyIncome</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>The Permanent Residence value should be set based on the user selection</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCitizenInfo</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.001s</td>
+                  <td>The Permanent Residence value should be set null if user selection is empty</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCitizenInfo</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.001s</td>
+                  <td>Has Other Residence value should be set based on the user selection</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCitizenInfo</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>US citizenship value should be set based on the user selection</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCitizenInfo</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Has political relationship value should be set based on the user selection</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCitizenInfo</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.001s</td>
+                  <td>Vehicle type value should be set based on the user selection</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkCitizenInfo</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Primary Phone type should be Home if Home option is selected</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkPhoneType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Primary Phone type should be Home if Work option is selected</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkPhoneType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.001s</td>
+                  <td>Primary Phone type should be Home if Mobile option is selected</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkPhoneType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Do you have other income you like considered option should be true if Yes option selected</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkOtherIncome</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Do you have other income you like considered option should be false if No option selected</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; checkOtherIncome</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.004s</td>
+                  <td>User details is not stored in SharedProperties</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; employmentType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Get Email id for the given user id</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; employmentType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Employment Type should be set to Employed</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; employmentType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Employment Type should be set to Un Employed</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; employmentType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>Employment Type should be set to Student</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; employmentType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.003s</td>
+                  <td>Employment Type should be set to Retired</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; employmentType</div>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.003s</td>
+                  <td>should uppercase input</td>
+                  <td class="specs-def">
+                    <div class="">NewApplicationCtrl &raquo; Testing Telephone Filter</div>
+                  </td>
+                </tr>
+                <tr class="danger">
+                  <td>Failed</td>
+                  <td>should make a  call to autoloan service and throw error</td>
+                  <td class="specs-def">
+                    <div class="">Test Controller using autoloan service Testing Suite</div>
+                    <pre class="pre-scrollable text-justify">Error: Not a valid ZipCode in C:/Ragav/Work/TDDWorkspace/autoloan/src/main/resources/static/node_modules/karma-jasmine/lib/jasmine.js (line 1609)
+fetchAddressByZipCode@newApplication/newApplicationCtrl.js:332:71
+newApplication/newApplicationCtrl.spec.js:9:29754
+</pre>
+                  </td>
+                </tr>
+                <tr class="success">
+                  <td>Passed in 0.002s</td>
+                  <td>should have all the reindeer available on $scope.reindeer</td>
+                  <td class="specs-def">
+                    <div class="">HttpTestController Suite</div>
+                  </td>
+                </tr>
+                <tr class="system-out">
+                  <td colspan="3"><strong>System output:</strong><br />PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'New Application Controller - Zip Code URL: /branchdetail?zipCode='
+<br />PhantomJS 2.1.1 (Windows 7 0.0.0) LOG: 'Request Input: 08817'
+</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="pull-right"/>
+    </footer>
+    <script src="assets/js/d3.js"></script>
+    <script src="assets/js/c3.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
